@@ -1,5 +1,8 @@
 package com.study.springcore.chap01;
 
+import com.study.springcore.chap02.AsianRestaurant;
+import com.study.springcore.chap02.Restaurant;
+
 public class Hotel {
     /**
      * @problem - 호텔 클래스에서 직접 객체를 생성하면
@@ -9,10 +12,10 @@ public class Hotel {
      *            같이 바뀌어야 할 때 2군데를 수정해야 함.
      */
     //레스토랑
-    private WesturnRestaurant restaurant = new WesturnRestaurant();
+    private Restaurant restaurant = new AsianRestaurant();
 
     //헤드 쉐프
-    private JohnChef chef = new JohnChef();
+    private Chef chef = new JohnChef();
 
     WesturnCourse course = new WesturnCourse() ;
 

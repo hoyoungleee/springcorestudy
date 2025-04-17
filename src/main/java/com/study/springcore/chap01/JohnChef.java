@@ -1,6 +1,6 @@
 package com.study.springcore.chap01;
 
-public class JohnChef {
+public class JohnChef implements Chef {
 
     public void cook(){
         System.out.println("안녕하세요. John Chef 입니다.");

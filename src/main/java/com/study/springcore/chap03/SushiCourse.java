@@ -1,4 +1,4 @@
-package com.study.springcore.chap02;
+package com.study.springcore.chap03;
 
 public class SushiCourse implements Course {
 

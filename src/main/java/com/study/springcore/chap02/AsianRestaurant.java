@@ -1,6 +1,6 @@
 package com.study.springcore.chap02;
 
-public class AsianRestaurant {
+public class AsianRestaurant implements Restaurant {
 
     private KimChef chef = new KimChef();
 

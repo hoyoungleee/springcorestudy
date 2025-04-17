@@ -1,6 +1,6 @@
-package com.study.springcore.chap02;
+package com.study.springcore.chap03;
 
-public class WesturnCourse implements  Course{
+public class WesturnCourse implements Course {
 
     public void combineMenu() {
         System.out.println("====== 서양 코스 구성 ======");

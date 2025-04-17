@@ -1,6 +1,6 @@
-package com.study.springcore.chap02;
+package com.study.springcore.chap03;
 
-import com.study.springcore.chap01.Chef;
+import com.study.springcore.chap03.Chef;
 
 public class JohnChef implements Chef {
 
