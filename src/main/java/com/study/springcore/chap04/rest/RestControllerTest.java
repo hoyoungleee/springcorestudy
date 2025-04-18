@@ -46,4 +46,34 @@ public class RestControllerTest {
 //        return "OK!";
 //    }
 
+
+    //url 에 포함되어있는 특정 정보 얻어오기
+    //@PathVariable: url에 있는 특정값을 가져옴
+    @GetMapping("/rest/{userId}/posts/{bno}")
+    public String  method4(@PathVariable int bno, @PathVariable String  userId){
+        System.out.println("bno = " + bno);
+        System.out.println("userId = " + userId);
+        return "ok!";
+    }
+
+    //쿼리스트링(쿼리 파라미터)로 전달되는 데이터 개별로 받기
+    //http://localhost:8081/rest/post?category=title&sort=latest&keyword=야호
+    @GetMapping("/rest/posts")
+    public String method5(@RequestParam String category,
+                          @RequestParam ("sort") String s,
+                          @RequestParam ("keyword") String k){
+        System.out.println("category = " + category);
+        System.out.println("s = " + s);
+        System.out.println("k = " + k);
+        return "ok!";
+    }
+
+    // 커맨드 객체(request DTO) 사용해서 쿼리 파라미터 처리하기
+    // 쿼리 파라미터의 key값과 DTO의 필드명을 맞춰주셔야 setter가 정상적으로 호출됩니다.
+    // http://localhost:8181/orders?orderNum=22&goods=구두&price=20000&amount=3...
+    @GetMapping("/orders")
+    public String method6(OrderDTO dto){
+        System.out.println("dto = " + dto);
+        return "ok!";
+    }
 }
